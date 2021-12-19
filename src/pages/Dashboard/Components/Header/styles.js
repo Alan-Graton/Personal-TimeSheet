@@ -4,7 +4,7 @@ const useStyles = makeStyles({
     grow: {
         flexGrow: 1,
     },
-    useSection: {
+    userSection: {
         display: "flex",
         alignItems: "center",
     },

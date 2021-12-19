@@ -4,8 +4,6 @@ import useStyles from "./styles";
 
 // Icons
 import { IconButton } from "@material-ui/core";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
 import MenuIcon from "@material-ui/icons/Menu";
 
 // Components
@@ -14,7 +12,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Avatar from "@material-ui/core/Avatar";
 
 function Header() {
-    const classes = useStyles();
+  const classes = useStyles();
   return (
     <AppBar position="fixed" color="inherit">
       <Toolbar>
@@ -26,7 +24,17 @@ function Header() {
             fontSize="medium"
           />
         </IconButton>
-        <div className={classes.grow} ></div>
+        <div className={classes.grow}></div>
+        <h3>Your Personal TimeSheet</h3>
+        <div className={classes.grow}></div>
+        <div className={classes.userSection}>
+          <Avatar
+            className={classes.avatar}
+            onClick={() => {
+              alert("Mostrar dados do Usuário");
+            }}
+          />
+        </div>
       </Toolbar>
     </AppBar>
   );

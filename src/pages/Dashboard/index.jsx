@@ -1,6 +1,8 @@
 import React from "react";
 
+// Dashboard Components
 import Header from "./Components/Header/index";
+import Main from "./Components/Main/Main";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -25,10 +27,16 @@ const useStyles = makeStyles({
 function Dashboard() {
   const classes = useStyles();
   return (
-    <div>
-        <Header />
+    <div className={classes.root} >
+      <Header />
       <div className={classes.toolbar}></div>
-      <main>Oi Alan</main>
+      <main className={classes.main} >
+        {/* <Container> */}
+          {/* <Box> */}
+            <Main />
+          {/* </Box> */}
+        {/* </Container> */}
+      </main>
     </div>
   );
 }
