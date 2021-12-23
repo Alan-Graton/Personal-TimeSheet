@@ -8,14 +8,20 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 
-function Sidebar() {
+function Sidebar(props) {
   const classes = useStyles();
   return (
-    <Paper className={classes.root} elevation={1} square >
-      <Button className={classes.buttons} >Home</Button>
+    <Paper className={classes.root} elevation={1} square>
+      <Button onClick={props.HomePageClick} className={classes.buttons}>
+        Home
+      </Button>
       <Divider />
-      <Button className={classes.buttons} >Launch</Button>
-      <Button className={classes.buttons} >Query</Button>
+      <Button onClick={props.LaunchPageClick} className={classes.buttons}>
+        Launch
+      </Button>
+      <Button onClick={props.QueryPageClick} className={classes.buttons}>
+        Query
+      </Button>
       <Divider />
     </Paper>
   );

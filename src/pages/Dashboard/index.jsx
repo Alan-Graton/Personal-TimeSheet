@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Dashboard Components
 import Header from "./Components/Header/index";
@@ -26,16 +26,15 @@ const useStyles = makeStyles({
 
 function Dashboard() {
   const classes = useStyles();
+
   return (
     <div className={classes.root} >
-      <Header />
-      <div className={classes.toolbar}></div>
       <main className={classes.main} >
-        {/* <Container> */}
-          {/* <Box> */}
+        <Container>
+          <Box>
             <Main />
-          {/* </Box> */}
-        {/* </Container> */}
+          </Box>
+        </Container>
       </main>
     </div>
   );
