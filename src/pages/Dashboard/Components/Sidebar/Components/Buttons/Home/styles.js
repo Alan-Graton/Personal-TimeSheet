@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
         height: "350px",
         padding: "30px 20px",
         borderRadius: 15,
+        marginTop: "70px",
     },
     cardContent: {
         display: "grid",

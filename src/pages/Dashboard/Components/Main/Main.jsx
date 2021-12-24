@@ -33,7 +33,6 @@ function Main() {
   };
   return (
     <div>
-      {/* Passar o useState "homePage" como "prop" para o Header */}
       <Header HeaderAvatarClick={handleHomePageClick} />
       <Sidebar
         HomePageClick={handleHomePageClick}
