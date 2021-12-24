@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 // Dashboard Components
-import Header from "./Components/Header/index";
 import Main from "./Components/Main/Main";
 
 import { makeStyles } from "@material-ui/core/styles";
