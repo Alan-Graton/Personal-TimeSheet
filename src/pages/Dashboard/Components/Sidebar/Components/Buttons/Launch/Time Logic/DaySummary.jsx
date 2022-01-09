@@ -70,7 +70,7 @@ class DaySummary extends React.Component {
           <div className="div-horarioInicio">
             {/* HORA INÍCIO */}
             <Typography variant="button" className="labelsFields">
-              Início
+              Start
             </Typography>
             <TimeIn_TimeInput
               changeNotifyStart={this.notifyDayStart}
@@ -81,7 +81,7 @@ class DaySummary extends React.Component {
           <div className="div-horarioTermino">
             {/* HORA TÉRMINO */}
             <Typography variant="button" className="labelsFields">
-              Término
+              End
             </Typography>
             <TimeOut_TimeInput
               changeNotifyEnd={this.notifyDayEnd}

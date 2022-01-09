@@ -1,21 +1,27 @@
 import React from "react";
 
-import TB_Body from "./Table Components/Table_Body";
+// JSX Table Components
+import Header from "./Table/Components/Header";
+import Body from "./Table/Components/Body";
 
-import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
 
-const useStyles = makeStyles({
-    tableRoot: {
-        marginTop: 70,
-    }
-})
+import Table from "@material-ui/core/Table";
+import TableContainer from "@material-ui/core/TableContainer";
+
+import useStyles from "../Launch/Table/Components/styles/Table"
 
 function Launch() {
     const classes = useStyles();
   return(
-      <div className={classes.tableRoot} >
-          <TB_Body />
-      </div>
+      <>
+          <TableContainer className={classes.tableContainer} component={Paper} >
+              <Table className={classes.tableRoot} >
+                  <Header />
+                  <Body />
+              </Table>
+          </TableContainer>
+      </>
   );
 }
 

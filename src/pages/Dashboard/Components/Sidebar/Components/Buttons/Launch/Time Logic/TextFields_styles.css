@@ -1,32 +1,31 @@
 .rootDiv {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .textFields {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .labelsFields {
-    color: #989c9c;
-  }
-  
-  .HoursTotal {
-    font-weight: bold;
-    margin-right: 5px;
-    margin-left: 5px;
-    font-size: 17px;
-  }
-  
-  .totalHoursLabels {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.textFields {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.labelsFields {
+  color: #989c9c;
+}
+
+.HoursTotal {
+  font-weight: bold;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 17px;
+}
+
+.totalHoursLabels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

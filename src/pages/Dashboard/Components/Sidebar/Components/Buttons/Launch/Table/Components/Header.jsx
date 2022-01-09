@@ -19,17 +19,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function TB_Header() {
+function Header() {
   const classes = useStyles();
   return (
     <TableHead>
       <TableRow>
         <TableCell className={classes.headerCell}>
-          <Typography variant="h6">Launch Hours</Typography>
+          <Typography variant="h6">Hours Launching</Typography>
         </TableCell>
       </TableRow>
     </TableHead>
   );
 }
 
-export default TB_Header;
+export default Header;
