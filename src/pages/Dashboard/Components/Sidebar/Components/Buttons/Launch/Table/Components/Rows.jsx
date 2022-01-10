@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import DaySummary from "../../Time Logic/DaySummary";
 
@@ -11,6 +11,8 @@ import TableCell from "@material-ui/core/TableCell";
 
 import useStyles from "./styles/Rows";
 
+import ProjectCard from "../../Project Card/index";
+
 function Rows() {
   const classes = useStyles();
 
@@ -18,8 +20,18 @@ function Rows() {
   const dailySummary = (d, v) => {
     dailyValues[d] = v;
   };
+
+  const [projectCard, setProjectCard] = useState(false);
+
+  const handleProjectCard = (event) => {
+    event.preventDefault();
+
+    setProjectCard(!projectCard);
+  }
+
   return (
-    <TableRow className={classes.tableRow}>
+    <div>
+      <TableRow className={classes.tableRow}>
       <TableCell>
         <input type="date" className={classes.dateInput} />
       </TableCell>
@@ -39,9 +51,15 @@ function Rows() {
         />
       </TableCell>
       <TableCell>
-        <Button className={classes.addProject}>Add</Button>
+        <Button onClick={handleProjectCard} className={classes.addProject}>Add</Button>
       </TableCell>
     </TableRow>
+    {
+      projectCard && (
+        <ProjectCard />
+      )
+    }
+    </div>
   );
 }
 
