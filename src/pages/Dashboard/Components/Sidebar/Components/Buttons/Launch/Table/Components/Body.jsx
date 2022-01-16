@@ -7,12 +7,12 @@ import TableBody from "@material-ui/core/TableBody";
 
 import useStyles from "./styles/Body";
 
-function Body() {
+function Body({ projectCardShow }) {
   const classes = useStyles();
   return (
     <>
       <TableBody className={classes.body}>
-        <Rows />
+        <Rows projectCardShow={projectCardShow} />
       </TableBody>
     </>
   );

@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Header from "./Table/Components/Header";
 import Body from "./Table/Components/Body";
 
+import ProjectCard from "./Project Card/index";
+
 import Paper from "@material-ui/core/Paper";
 
 import Table from "@material-ui/core/Table";
@@ -15,10 +17,10 @@ function Launch() {
   const classes = useStyles();
 
   const [projectCard, setProjectCard] = useState([]);
-  const handleProjectCard = (event) => {
-      event.preventDefault();
+  const handleSetProjectCard = (event) => {
+    event.preventDefault();
 
-      setProjectCard([...projectCard, +1]);
+    setProjectCard([...projectCard, +1]);
   }
 
   return (
@@ -26,9 +28,14 @@ function Launch() {
       <TableContainer className={classes.tableContainer} component={Paper}>
         <Table className={classes.tableRoot}>
           <Header />
-          <Body />
+          <Body projectCardShow={handleSetProjectCard} />
         </Table>
       </TableContainer>
+      {
+        projectCard.map((index) => (
+          <ProjectCard key={index} />
+        ))
+      }
     </>
   );
 }
