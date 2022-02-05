@@ -8,18 +8,35 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 
+// Buttons Icons
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import LaunchRoundedIcon from "@material-ui/icons/LaunchRounded";
+import AssessmentRoundedIcon from "@material-ui/icons/AssessmentRounded";
+
 function Sidebar(props) {
   const classes = useStyles();
   return (
     <Paper className={classes.root} elevation={1} square>
-      <Button onClick={props.HomePageClick} className={classes.buttons}>
+      <Button
+        endIcon={<HomeRoundedIcon />}
+        onClick={props.HomePageClick}
+        className={classes.buttons}
+      >
         Home
       </Button>
       <Divider />
-      <Button onClick={props.LaunchPageClick} className={classes.buttons}>
+      <Button
+        endIcon={<LaunchRoundedIcon />}
+        onClick={props.LaunchPageClick}
+        className={classes.buttons}
+      >
         Launch
       </Button>
-      <Button onClick={props.QueryPageClick} className={classes.buttons}>
+      <Button
+        endIcon={<AssessmentRoundedIcon />}
+        onClick={props.QueryPageClick}
+        className={classes.buttons}
+      >
         Query
       </Button>
       <Divider />

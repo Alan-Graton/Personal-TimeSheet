@@ -2,9 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     root: {
-        width: "10%",
-        maxWidth: "20%",
-        minWidth: "10%",
+        width: "35%",
+        maxWidth: 215,
+        minWidth: 215,
         display: "flex",
         flexDirection: "column",
         position: "fixed",

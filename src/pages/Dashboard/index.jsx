@@ -27,8 +27,8 @@ function Dashboard() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root} >
-      <main className={classes.main} >
+    <div className={classes.root}>
+      <main className={classes.main}>
         <Container>
           <Box>
             <Main />
