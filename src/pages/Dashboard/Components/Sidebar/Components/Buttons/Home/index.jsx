@@ -5,30 +5,32 @@ import useStyles from "./styles";
 // Components Styles
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
+
+import ProfilePic_Test from "./ProfilePic_Test.png";
 
 function Home() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <Card className={classes.card}>
+    <div className={classes.root} >
+      <Card className={classes.card} >
         <CardHeader
-          className={classes.cardContent}
           title={
             <div>
-              <Avatar
-                alt="Alan Graton"
-                sx={{ width: 5, height: 50, backgroundColor: "#3bd408" }}
-                src="/"
+              <img
+                className={classes.bugsBunny}
+                src={ProfilePic_Test}
+                alt="Profile"
               />
             </div>
           }
           subheader={
             <div>
-              <Typography>Alan Graton Lourenço de Brito</Typography>
+              <Typography variant="overline">Mr. Bugs Bunny</Typography>
               <Divider />
+              <Typography variant="h6">Account</Typography>
+              <Typography>bunny.bugs@gmail.com</Typography>
             </div>
           }
         />
