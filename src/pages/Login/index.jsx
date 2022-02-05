@@ -1,42 +1,79 @@
 import React from "react";
 
+// Images
+import gmail from "./gmail.png";
+import anonymous from "./anonymous.png";
+
 // Styles
 import useStyles from "./styles";
 
 // Components
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
-import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+
+// Icons
+import BusinessRoundedIcon from "@mui/icons-material/BusinessRounded";
+import NoAccountsOutlinedIcon from "@mui/icons-material/NoAccountsOutlined";
 
 function Login({ SetUserEvent }) {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <Card className={classes.card}>
         <CardHeader
           title={
             <div className={classes.cardHeaderTitle}>
-              <h1>Login</h1>
+              <h1>Sign up</h1>
             </div>
           }
           subheader={
             <div className={classes.cardSubHeaderBtns}>
-              <Button variant="contained" className={classes.BtnNoAccount}>
-                Continue without an account
+              <Button
+                onClick={SetUserEvent}
+                endIcon={<BusinessRoundedIcon />}
+                color="primary"
+                variant="contained"
+              >
+                I'm a Company
               </Button>
-              <Button variant="contained" className={classes.BtnEmailAccount}>
-                Enter with an E-mail
+              <Divider
+                style={{
+                  width: "100%",
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                }}
+              />
+              <Button
+                onClick={SetUserEvent}
+                endIcon={<NoAccountsOutlinedIcon />}
+                color="inherit"
+                variant="contained"
+              >
+                Continue without an Account
               </Button>
-              <Typography variant="caption">
-                Without an account will only be needed to create a Profile Name
-              </Typography>
+              <Divider
+                style={{
+                  width: "100%",
+                  marginBottom: "20px",
+                  marginTop: "20px",
+                }}
+              />
+              <Typography variant="button">Or</Typography>
+              <img
+                className={classes.gmailAccount}
+                onClick={SetUserEvent}
+                src={gmail}
+                alt="Gmail Account"
+              />
             </div>
           }
         />
+        <Typography></Typography>
       </Card>
-      <button onClick={SetUserEvent}>Access Dashboard</button>
     </div>
   );
 }
