@@ -52,6 +52,14 @@ const useStyles = makeStyles((theme) => ({
     componenteLabels: {
         color: "#989c9c",
     },
+    newProjectdiv: {
+        display: "grid",
+        placeItems: "center"
+    },
+    styledMenuDiv: {
+        display: "grid",
+        placeItems: "center",
+    }
 }))
 
 export default useStyles;
