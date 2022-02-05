@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+
+import ProfilePic_Test from "./ProfilePic_Test.png";
 
 // Styles
 import useStyles from "./styles";
@@ -16,12 +18,6 @@ import Avatar from "@material-ui/core/Avatar";
 function Header({HeaderAvatarClick}) {
   const classes = useStyles();
 
-  const [avatarClick, setAvatarClick] = useState(false);
-  const handleAvatarClick = (event) => {
-    event.preventDefault();
-
-    setAvatarClick(!avatarClick);
-  };
   return (
     <AppBar position="fixed" color="inherit">
       <Toolbar>
@@ -38,7 +34,7 @@ function Header({HeaderAvatarClick}) {
         <h3>Your Personal TimeSheet</h3>
         <div className={classes.grow}></div>
         <div className={classes.userSection}>
-          <Avatar className={classes.avatar} onClick={HeaderAvatarClick} />
+          <Avatar src={ProfilePic_Test} variant="rounded" className={classes.avatar} onClick={HeaderAvatarClick} />
         </div>
       </Toolbar>
     </AppBar>
