@@ -23,17 +23,27 @@ function Launch() {
     setProjectCard([...projectCard, +1]);
   }
 
+  const [fieldsValues, setFieldsValues] = useState({
+    projectDate: "",
+    project: "",
+    projectDescription: "",
+    projectStart: "",
+    projectEnd: "",
+    projectTotalHours: "",
+    projectTimestamp: "",
+  })
+
   return (
     <>
       <TableContainer className={classes.tableContainer} component={Paper}>
         <Table className={classes.tableRoot}>
           <Header />
-          <Body projectCardShow={handleSetProjectCard} />
+          <Body projectCardShow={handleSetProjectCard} fieldsValues={fieldsValues} />
         </Table>
       </TableContainer>
       {
         projectCard.map((index) => (
-          <ProjectCard key={index} />
+          <ProjectCard key={index} fieldsValues={fieldsValues} />
         ))
       }
     </>

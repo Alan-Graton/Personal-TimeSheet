@@ -49,12 +49,12 @@ function SelectProjectBtn() {
               >
                 New Project
               </Button>
-              {field && <Textfield placeholder="New project" />}
+              {field && <Textfield name="project" placeholder="New project" />}
             </div>
           </MenuItem>
           <Divider sx={{ my: 0.5 }} />
           <MenuItem disableRipple>
-            <Textfield placeHolder="Project name" />
+            <Textfield name="project" placeHolder="Project name" />
           </MenuItem>
         </StyledMenu>
       </div>

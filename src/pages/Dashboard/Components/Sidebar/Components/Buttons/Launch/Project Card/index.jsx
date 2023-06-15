@@ -10,14 +10,14 @@ import TableContainer from "@material-ui/core/TableContainer";
 
 import useStyles from "./Components/styles/Index";
 
-function ProjectCard() {
+function ProjectCard({ fieldsValues }) {
   const classes = useStyles();
   return (
     <>
       <TableContainer className={classes.tableContainer} component={Paper}>
         <Table className={classes.tableRoot}>
           <Header />
-          <Body />
+          <Body fieldsValues={fieldsValues} />
         </Table>
       </TableContainer>
     </>

@@ -68,7 +68,7 @@ class TimeIn_TimeInput extends React.Component {
       <div>
         <TextField
           color="secondary"
-          name="timein"
+          name="projectStart"
           type="text"
           size="small"
           onChange={this.onInputHandleStart}

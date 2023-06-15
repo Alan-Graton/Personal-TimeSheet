@@ -6,11 +6,11 @@ import TableBody from "@material-ui/core/TableBody";
 
 import useStyles from "./styles/Body";
 
-function Body() {
+function Body({ fieldsValues }) {
   const classes = useStyles();
   return (
     <TableBody className={classes.body}>
-      <Rows />
+      <Rows fieldsValues={fieldsValues} />
     </TableBody>
   );
 }

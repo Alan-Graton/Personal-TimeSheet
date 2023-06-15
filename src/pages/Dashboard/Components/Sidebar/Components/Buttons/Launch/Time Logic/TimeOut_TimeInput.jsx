@@ -68,7 +68,7 @@ class TimeOut_TimeInput extends React.Component {
       <div>
         <TextField
           color="secondary"
-          name="timeout"
+          name="projectEnd"
           type="text"
           size="small"
           onChange={this.onInputHandleEnd}

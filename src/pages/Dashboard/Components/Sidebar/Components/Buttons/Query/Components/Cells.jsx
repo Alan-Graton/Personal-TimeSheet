@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: theme.palette.primary.light,
     color: theme.palette.getContrastText(theme.palette.primary.light),
+    marginRight: "30px",
   },
   cellsContent: {
     // display: "flex",

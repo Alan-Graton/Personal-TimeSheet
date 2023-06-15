@@ -12,7 +12,7 @@ import TableCell from "@material-ui/core/TableCell";
 
 import useStyles from "./styles/Rows";
 
-function Rows({ projectCardShow }) {
+function Rows({ projectCardShow, fieldsValues }) {
   const classes = useStyles();
 
   const dailyValues = [0, 0, 0, 0, 0];
@@ -20,11 +20,24 @@ function Rows({ projectCardShow }) {
     dailyValues[d] = v;
   };
 
+  const handleFieldsOnBlur = (event) => {
+    event.preventDefault();
+    var fieldName = event.target.getAttribute("name");
+    var fieldValue = event.target.value;
+
+    Object.keys(fieldsValues).forEach((key) => {
+      if(fieldName === key){
+        fieldsValues[key] = fieldValue;
+        console.log(fieldsValues[key]);
+      }
+    })
+  }
+
   return (
     <div>
       <TableRow className={classes.tableRow}>
         <TableCell>
-          <input type="date" className={classes.dateInput} />
+          <input name="projectDate" onBlur={handleFieldsOnBlur} type="date" className={classes.dateInput} />
         </TableCell>
         <TableCell>
           <SelectProjectBtn />
@@ -33,7 +46,7 @@ function Rows({ projectCardShow }) {
           <Typography className={classes.componenteLabels} variant="button">
             Description
           </Typography>
-          <TextField color="secondary" sixe="small" />
+          <TextField name="projectDescription" onBlur={handleFieldsOnBlur} color="secondary" size="small" />
         </TableCell>
         <TableCell>
           <DaySummary

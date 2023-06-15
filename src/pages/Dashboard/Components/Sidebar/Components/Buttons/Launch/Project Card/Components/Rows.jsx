@@ -6,27 +6,27 @@ import TableCell from "@material-ui/core/TableCell";
 
 import useStyles from "./styles/Rows";
 
-function Rows() {
+function Rows(prop) {
   const classes = useStyles();
   return (
     <TableRow>
       <TableCell className={classes.projectCardContent}>
-        <Typography>Data de Lançamento</Typography>
+        <Typography>{prop.projectDate}</Typography>
       </TableCell>
       <TableCell className={classes.projectCardContent}>
-        <Typography>Nome do Projeto</Typography>
+        <Typography>{prop.project}</Typography>
       </TableCell>
       <TableCell className={classes.projectCardContent}>
-        <Typography>Descrição do Projeto</Typography>
+        <Typography>{prop.projectDescription}</Typography>
       </TableCell>
       <TableCell className={classes.projectCardContent}>
-        <Typography>Hora de Entrada</Typography>
+        <Typography>{prop.projectStart}</Typography>
       </TableCell>
       <TableCell className={classes.projectCardContent}>
-        <Typography>Hora de Saída</Typography>
+        <Typography>{prop.projectEnd}</Typography>
       </TableCell>
       <TableCell className={classes.projectCardContent}>
-        <Typography>Hora Total</Typography>
+        <Typography>{prop.projectTotalHours}</Typography>
       </TableCell>
     </TableRow>
   );

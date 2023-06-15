@@ -8,6 +8,7 @@ import Header from "../Header/index";
 import Home from "../Sidebar/Components/Buttons/Home/index";
 import Launch from "../Sidebar/Components/Buttons/Launch/index";
 import Query from "../Sidebar/Components/Buttons/Query/index";
+import About from "../Sidebar/Components/Buttons/About/index";
 
 function Main() {
   const [homePage, setHomePage] = useState(false);
@@ -16,6 +17,7 @@ function Main() {
     setHomePage(!homePage);
     setLaunchPage(false);
     setQueryPage(false);
+    setAboutPage(false);
   };
   const [launchPage, setLaunchPage] = useState(false);
   const handleLaunchPageClick = (event) => {
@@ -23,6 +25,7 @@ function Main() {
     setLaunchPage(!launchPage);
     setHomePage(false);
     setQueryPage(false);
+    setAboutPage(false);
   };
   const [queryPage, setQueryPage] = useState(false);
   const handleQueryPageClick = (event) => {
@@ -30,7 +33,17 @@ function Main() {
     setQueryPage(!queryPage);
     setHomePage(false);
     setLaunchPage(false);
+    setAboutPage(false);
   };
+  const [aboutPage, setAboutPage] = useState(false);
+  const handleAboutPageClick = (event) => {
+    event.preventDefault();
+    setAboutPage(!aboutPage);
+    setQueryPage(false);
+    setHomePage(false);
+    setLaunchPage(false);
+  }
+
   return (
     <div>
       <Header HeaderAvatarClick={handleHomePageClick} />
@@ -38,10 +51,12 @@ function Main() {
         HomePageClick={handleHomePageClick}
         LaunchPageClick={handleLaunchPageClick}
         QueryPageClick={handleQueryPageClick}
+        AboutPageClick={handleAboutPageClick}
       />
       {homePage ? <Home /> : null}
       {launchPage ? <Launch /> : null}
       {queryPage ? <Query /> : null}
+      {aboutPage ? <About /> : null}
     </div>
   );
 }

@@ -12,6 +12,7 @@ import Divider from "@material-ui/core/Divider";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import LaunchRoundedIcon from "@material-ui/icons/LaunchRounded";
 import AssessmentRoundedIcon from "@material-ui/icons/AssessmentRounded";
+import InfoRoundedIcon from "@mui/icons-material/InfoRounded";
 
 function Sidebar(props) {
   const classes = useStyles();
@@ -40,6 +41,13 @@ function Sidebar(props) {
         Query
       </Button>
       <Divider />
+      <Button
+        endIcon={<InfoRoundedIcon />}
+        onClick={props.AboutPageClick}
+        className={classes.buttons}
+      >
+        About
+      </Button>
     </Paper>
   );
 }
